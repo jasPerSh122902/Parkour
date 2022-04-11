@@ -8,6 +8,8 @@ public class TrapsBehaviour : MonoBehaviour
     private Transform _player;
     [SerializeField]
     private Transform _respawn_point;
+    [SerializeField]
+    private HealthBehaviour healthBehaviour;
 
     public Transform Player
     {
@@ -21,6 +23,7 @@ public class TrapsBehaviour : MonoBehaviour
         {
             _player.transform.position = _respawn_point.transform.position;
 
+            healthBehaviour.TakeDamage(1);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private int _health = 5;
+    private int _lives = 0;
     [SerializeField]
     private bool _isAlive;
     [SerializeField]
@@ -13,9 +13,9 @@ public class HealthBehaviour : MonoBehaviour
     private PlayerMovementBehaviour _player;
     private Rigidbody _rigidbody;
 
-    public int Health
+    public int Lives
     {
-        get { return _health; }
+        get { return _lives; }
     }
     public bool IsAlive
     {
@@ -24,7 +24,7 @@ public class HealthBehaviour : MonoBehaviour
 
     public  int TakeDamage(int damageAmount)
     {
-        _health -= damageAmount;
+        _lives += damageAmount;
 
         return damageAmount;
     }
@@ -36,10 +36,7 @@ public class HealthBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_health <= 0 && IsAlive)
-            _isAlive = false;
-
-        _isAlive = _health > 0;
+        _isAlive = _lives > 0;
 
         if (!IsAlive && _distroyOnDeath)
             OnDeath();
