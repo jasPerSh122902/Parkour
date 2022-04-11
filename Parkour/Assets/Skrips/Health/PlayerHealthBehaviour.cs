@@ -13,7 +13,7 @@ public class PlayerHealthBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ////this could be cleaned up by putting this in the take damage function
+        //this could be cleaned up by putting this in the take damage function
         float health = _player.Lives;
         if (health < 0) health = 0;
         _healthText.text = "Lives Used: " + health;

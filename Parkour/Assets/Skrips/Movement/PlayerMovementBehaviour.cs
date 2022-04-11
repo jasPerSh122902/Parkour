@@ -25,12 +25,10 @@ public class PlayerMovementBehaviour : MonoBehaviour
     //update
     private void FixedUpdate()
     {
+        //print("I am here");
         //tells the rigidbody to move to a position
         Vector3 velocity = MoveDirection * _speed * Time.deltaTime;
         _rigidbody.MovePosition(transform.position + velocity);
-
-        //print(velocity.x);
-        //print(velocity.y);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,7 +36,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
         if (transform == _goal)
         {
             Destroy(_goal);
-
         }
     }
 }

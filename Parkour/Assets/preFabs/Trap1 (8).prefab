@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 5063538195333032226, guid: 99e667da1a7f5164b8c700f76dee441a, type: 3}
-  _respawn_point: {fileID: 5584690203561379628, guid: d87b6d4a51f4a3f45a1295e02bf3d7b4, type: 3}
+  _respawn_point: {fileID: 1438392427264631501, guid: 756484a93f7590a46ab0788e6dc73011, type: 3}
   healthBehaviour: {fileID: 8618301020573459190, guid: 99e667da1a7f5164b8c700f76dee441a, type: 3}
 --- !u!54 &4145398736004413759
 Rigidbody:

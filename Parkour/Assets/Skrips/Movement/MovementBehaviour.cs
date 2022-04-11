@@ -18,6 +18,6 @@ public class MovementBehavriour : MonoBehaviour
     public virtual void Update()
     {
         transform.position += Velocity * Time.deltaTime;
-        
+       // print(Velocity);
     }
 }

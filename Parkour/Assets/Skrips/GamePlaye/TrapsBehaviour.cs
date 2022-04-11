@@ -21,9 +21,9 @@ public class TrapsBehaviour : MonoBehaviour
     {
         if (other.transform == _player)
         {
+            
             _player.transform.position = _respawn_point.transform.position;
-
-            healthBehaviour.TakeDamage(1);
+            healthBehaviour.TakeDamage(1); 
         }
     }
 }
