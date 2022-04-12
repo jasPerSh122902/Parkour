@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private Transform _goal;
     [SerializeField]
     private float _speed;
     private Rigidbody _rigidbody;
@@ -33,9 +32,5 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (transform == _goal)
-        {
-            Destroy(_goal);
-        }
     }
 }

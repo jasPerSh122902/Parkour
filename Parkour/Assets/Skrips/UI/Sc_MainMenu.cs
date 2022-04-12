@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Sc_MainMenu : MonoBehaviour
 {
     public GameObject MainMenu;
@@ -11,15 +11,17 @@ public class Sc_MainMenu : MonoBehaviour
         MainMenuButton();
     }
 
+    //increases the sene by 1
     public void PlayNowButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void MainMenuButton() 
     {
         MainMenu.SetActive(true);
     }
+    //leaves the game and close application
     public void QuitButton()
     {
         Application.Quit();
