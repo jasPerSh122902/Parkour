@@ -15,7 +15,7 @@ public class ExitMenuBehaviour : MonoBehaviour
     public void RestartButton()
     {
         //go back a scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
     }
 
     public void ExitMenuButton()
