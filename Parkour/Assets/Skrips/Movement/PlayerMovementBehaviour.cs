@@ -10,16 +10,19 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private Rigidbody _rigidbody;
     private Vector3 _moveDirection;
 
+    
     public Vector3 MoveDirection
     {
         get { return _moveDirection; }
         set { _moveDirection = value; }
     }
 
+    /// <summary>
+    /// when awake is called for players movement behaviour add a componet of rigidbody type
+    /// </summary>
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-
     }
     //update
     private void FixedUpdate()
@@ -31,6 +34,5 @@ public class PlayerMovementBehaviour : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
-    }
+    {  }
 }

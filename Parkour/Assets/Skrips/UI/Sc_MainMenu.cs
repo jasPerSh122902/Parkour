@@ -14,6 +14,7 @@ public class Sc_MainMenu : MonoBehaviour
     //increases the sene by 1
     public void PlayNowButton()
     {
+        //go forward a scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -24,6 +25,7 @@ public class Sc_MainMenu : MonoBehaviour
     //leaves the game and close application
     public void QuitButton()
     {
+        //leave
         Application.Quit();
     }
 }

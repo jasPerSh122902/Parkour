@@ -17,6 +17,7 @@ public class MovementBehavriour : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
+        //adds the veloicty scaled by the deltaTIme to the position
         transform.position += Velocity * Time.deltaTime;
        // print(Velocity);
     }

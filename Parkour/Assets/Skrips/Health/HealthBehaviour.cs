@@ -23,19 +23,17 @@ public class HealthBehaviour : MonoBehaviour
         get { return _isAlive; }
     }
 
-    public  int TakeDamage(int damageAmount)
+    //adds the damage amount to the lives make the lives go up
+    public  int  increaseLife(int damageAmount)
     {
         _lives += damageAmount;
 
         return damageAmount;
     }
     public virtual void OnDeath()
-    {
-        
-    }
+    {  }
 
     // Update is called once per frame
     void Update()
-    {
-    }
+    {  }
 }

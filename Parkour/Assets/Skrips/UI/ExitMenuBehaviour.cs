@@ -14,6 +14,7 @@ public class ExitMenuBehaviour : MonoBehaviour
 
     public void RestartButton()
     {
+        //go back a scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
@@ -23,6 +24,7 @@ public class ExitMenuBehaviour : MonoBehaviour
     }
     public void QuitButton()
     {
+        //leave
         Application.Quit();
     }
 }

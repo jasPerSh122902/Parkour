@@ -9,8 +9,10 @@ public class GoalBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //if the trasform is the goalers transform
         if (other.transform == _goaler)
         {
+            //load the scene that is next
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

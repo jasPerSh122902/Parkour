@@ -19,11 +19,13 @@ public class TrapsBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //if the transfor and the given players transform equal to each other
         if (other.transform == _player)
         {
-            
+            //make the players transform position the respawns position.
             _player.transform.position = _respawn_point.transform.position;
-            healthBehaviour.TakeDamage(1); 
+            //makes the lives go up by one
+            healthBehaviour.increaseLife(1);
         }
     }
 }

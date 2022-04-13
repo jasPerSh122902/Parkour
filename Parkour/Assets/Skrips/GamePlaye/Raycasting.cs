@@ -8,15 +8,17 @@ public class Raycasting : MonoBehaviour
     private float _speed;
     private Rigidbody _rigidbody;
     private Camera _camera;
-    // Start is called before the first frame update
     void Awake()
     {
+        //when awake is called get a compent of rigibody
         _rigidbody = GetComponent<Rigidbody>();
+        //make the camer to mains camera
         _camera = Camera.main;
     }
 
     private void FixedUpdate()
     {
+        
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
 
